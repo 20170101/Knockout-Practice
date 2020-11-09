@@ -1,0 +1,15 @@
+1.Declarative Bindings 声明式绑定
+Easily associate DOM elements with model data using a concise, readable syntax
+使用简明可读的语法可以简单地将DOM元素与model数据联系起来
+
+2.Automatic UI Refresh 自动UI刷新
+When your data model's state changes, your UI updates automatically
+当你的data model的state改变时，你的UI会自动更新
+
+3.Dependency Tracking 依赖追踪
+Implicitly set up chains of relationships between model data, to transform and combine it
+隐式地建立模型数据之间的关系链，以便对其进行转换和组合
+
+4.Templating 模板
+Quickly generate sophisticated, nested UIs as a function of your model data
+快速地生成复杂的，嵌套的UIs作为你的模型数据的函数
