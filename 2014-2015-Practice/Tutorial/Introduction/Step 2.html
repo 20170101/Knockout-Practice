@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../knockout-3.4.2.debug.js"></script>
+	</head>
+	<body>
+		<p>First name: <input data-bind="value: firstName"></p>
+		<p>Last name: <input data-bind="value: lastName"></p>
+		<P>First name is <span data-bind="text: firstName"></span></p>
+		<P>Last name is <span data-bind="text: lastName"></span></p>
+	</body>
+	<script>
+		function AppViewModel(){
+			this.firstName=ko.observable("Bert");
+			this.lastName=ko.observable("Bertington");
+		}
+		
+		ko.applyBindings(new AppViewModel());		
+		
+	</script>
+</html>
+

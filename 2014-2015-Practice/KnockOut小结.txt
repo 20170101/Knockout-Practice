@@ -1,0 +1,39 @@
+一、
+(1)首先，声明可用的套餐:
+var availableMeals = [
+    { mealName: 'Standard', description: 'Dry crusts of bread', extraCost: 0 },
+    { mealName: 'Premium', description: 'Fresh bread with cheese', extraCost: 9.95 },
+    { mealName: 'Deluxe', description: 'Caviar and vintage Dr Pepper', extraCost: 18.50 }
+  ];
+（2）如果想让这3个选项显示到页面上，我们可以绑定一个下拉菜单（例如：<select>元素）到这个数据上。例如：
+<h3>Meal upgrades</h3>
+<p>Make your flight more bearable by selecting a meal to match your social and economic status.</p>
+Chosen meal: <select data-bind="options: availableMeals,
+                                optionsText: 'mealName'"></select>
+（3）启用Knockout并使你的绑定生效，在availableMeals变量声明之后添加如下代码：
+var viewModel = {
+    /* we'll populate this in a moment */
+};
+
+ko.applyBindings(viewModel); // Makes Knockout get to work
+// 注意：ko. applyBindings需要在上述HTML之后应用才有效
+（4）响应选择：
+下一步，声明一个简单的data model来描述旅客已经选择的套餐，添加一个属性到当前的view model上：
+var viewModel = {
+    chosenMeal: ko.observable(availableMeals[0])
+};
+ko.observable是什么？它是KO里的一个基础概念。UI可以监控（observe）它的值并且回应它的变化。这里我
+们设置chosenMeal是UI可以监控已经选择的套餐，并初始化它，使用availableMeal里的第一个值作为它的默认值（例如：Standard）。
+（5）
+让我们将chosenMeal 关联到下拉菜单上，仅仅是更新<select>的data-bind属性，告诉它让<select>元素的值读取/写入
+chosenMeal这个模型属性：
+Chosen meal: <select data-bind="options: availableMeals,
+                                optionsText: 'mealName',
+                                value: chosenMeal"></select>
+理论上说，我们现在可以读/写chosenMeal 属性了，但是我们不知道它的作用。让我们来显示已选择套餐的描述和价格：
+<p>
+    You've chosen:
+    <b data-bind="text: chosenMeal().description"></b>
+    (price: <span data-bind='text: chosenMeal().extraCost'></span>)
+</p>
+于是，套餐信息和价格，将根据用户选择不同的套餐项而自动更新

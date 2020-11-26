@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../knockout-3.4.2.debug.js"></script>
+	</head>
+	<body>
+		<p>First name: <input data-bind="value: firstName"></p>
+		<p>Last name: <input data-bind="value: lastName"></p>
+		<p>Full name: <strong data-bind="text: fullName"></strong></p>
+		<button data-bind="click: capitalizeLastName">Go caps</button>
+	</body>
+	<script>
+		function AppViewModel(){
+			this.firstName=ko.observable("Bert");
+			this.lastName=ko.observable("Bertington");
+			
+			this.fullName=ko.computed(function(){
+				return this.firstName()+" " +this.lastName();
+			},this);
+			
+			this.capitalizeLastName=function(){
+				this.lastName(this.lastName().toUpperCase());
+			}
+		}
+		
+		ko.applyBindings(new AppViewModel());			
+	</script>
+</html>
+
