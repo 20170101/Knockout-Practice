@@ -1,1 +1,8 @@
-未完待续，完成后删除此行 Introduction
+未完待续，完成后删除此行 
+
+Introduction
+Knockout is a JavaScript library that helps you to create rich, responsive display and editor user interfaces with 
+a clean underlying data model. Any time you have sections of UI that update dynamically (e.g., changing depending 
+on the user’s actions or when an external data source changes), KO can help you implement it more simply and maintainably.
+Knockout 是一个JavaScript库可以通过一个干净的底层数据模型帮助你创建富有的，响应式的显示和编辑user interfaces.
+任何时候你有动态更新的sections of UI(例如，依赖用户的action的改变，或者当外部的数据源改变)，KO可以帮你更简单和可维护地实现它。
