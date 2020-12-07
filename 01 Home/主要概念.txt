@@ -8,7 +8,7 @@ When your data model's state changes, your UI updates automatically
 
 3.Dependency Tracking 依赖追踪
 Implicitly set up chains of relationships between model data, to transform and combine it
-隐式地建立模型数据之间的关系链，以便对其进行转换和组合
+隐式地建立model data之间的关系链，以便对其进行转换和组合
 
 4.Templating 模板
 Quickly generate sophisticated, nested UIs as a function of your model data
