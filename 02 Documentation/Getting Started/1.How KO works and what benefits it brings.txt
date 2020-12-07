@@ -7,3 +7,11 @@ on the user’s actions or when an external data source changes), KO can help yo
 Knockout 是一个JavaScript库可以通过一个干净的底层数据模型帮助你创建富有的，响应式的显示和编辑user interfaces.
 任何时候你有动态更新的sections of UI(例如，依赖用户的action的改变，或者当外部的数据源改变)，KO可以帮你更简单和可维护地实现它。
 
+Headline features:
+总体功能：
+Elegant dependency tracking - automatically updates the right parts of your UI whenever your data model changes.
+优雅的依赖跟踪 - 无论何时，你的数据模型改变时，自动更新你的UI的正确部分。
+Declarative bindings - a simple and obvious way to connect parts of your UI to your data model. You can construct 
+a complex dynamic UIs easily using arbitrarily nested binding contexts.
+声明式绑定 - 一个简单和明显的方式来连接你UI的部分到你的数据模型。你可以使用任意嵌套的绑定上下文来轻松地构建一个复杂的动态UIs.
+Trivially extensible - implement custom behaviors as new declarative bindings for easy reuse in just a few lines of code.
